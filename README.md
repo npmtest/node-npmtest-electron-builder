@@ -1,0 +1,139 @@
+# test coverage for  [electron-builder (v16.8.2)](https://github.com/electron-userland/electron-builder)  [![npm package](https://img.shields.io/npm/v/npmtest-electron-builder.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron-builder) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron-builder.svg)](https://travis-ci.org/npmtest/node-npmtest-electron-builder)
+#### A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box
+
+[![NPM](https://nodei.co/npm/electron-builder.png?downloads=true)](https://www.npmjs.com/package/electron-builder)
+
+| git-branch : | [alpha](https://github.com/npmtest/node-npmtest-electron-builder/tree/alpha)|
+|--:|:--|
+| coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-electron-builder/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-electron-builder/build/coverage.html/index.html)|
+| test-report : | [![test-report](https://npmtest.github.io/node-npmtest-electron-builder/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-electron-builder/build/test-report.html)|
+| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-electron-builder/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-electron-builder/tree/gh-pages/build)|
+
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-electron-builder/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-electron-builder/build/coverage.html/index.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-electron-builder/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-electron-builder%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-electron-builder/build/test-report.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-electron-builder/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-electron-builder%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-electron-builder/build/apidoc.html)
+
+![npmPackageListing](https://npmtest.github.io/node-npmtest-electron-builder/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmtest.github.io/node-npmtest-electron-builder/build/screenCapture.npmPackageDependencyTree.svg)
+
+
+
+# package.json
+
+```json
+
+{
+    "author": {
+        "name": "Stefan Judis"
+    },
+    "bin": {
+        "build": "./out/cli/build-cli.js",
+        "install-app-deps": "./out/cli/install-app-deps.js",
+        "node-gyp-rebuild": "./out/cli/node-gyp-rebuild.js"
+    },
+    "bugs": {
+        "url": "https://github.com/electron-userland/electron-builder/issues"
+    },
+    "dependencies": {
+        "7zip-bin": "^2.0.4",
+        "@electron-builder/electron-download": "4.2.1",
+        "ajv": "^5.0.4-beta.2",
+        "ajv-keywords": "^2.0.1-beta.2",
+        "bluebird-lst": "^1.0.2",
+        "chalk": "^1.1.3",
+        "chromium-pickle-js": "^0.2.0",
+        "cuint": "^0.2.2",
+        "electron-builder-core": "16.8.0",
+        "electron-builder-http": "16.6.0",
+        "electron-builder-util": "16.6.0",
+        "electron-osx-sign": "0.4.4",
+        "electron-publish": "16.6.2",
+        "fs-extra-p": "^4.1.0",
+        "hosted-git-info": "^2.4.1",
+        "is-ci": "^1.0.10",
+        "isbinaryfile": "^3.0.2",
+        "js-yaml": "^3.8.3",
+        "minimatch": "^3.0.3",
+        "node-forge": "^0.7.1",
+        "normalize-package-data": "^2.3.6",
+        "parse-color": "^1.0.0",
+        "plist": "^2.0.1",
+        "sanitize-filename": "^1.6.1",
+        "semver": "^5.3.0",
+        "update-notifier": "^2.1.0",
+        "uuid-1345": "^0.99.6",
+        "yargs": "^7.0.2"
+    },
+    "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box",
+    "devDependencies": {},
+    "directories": {},
+    "dist": {
+        "shasum": "881e344d3d6164fb09188c1a31c04ecdd7f1e53d",
+        "tarball": "https://registry.npmjs.org/electron-builder/-/electron-builder-16.8.2.tgz"
+    },
+    "engines": {
+        "node": ">=0.4.0"
+    },
+    "files": [
+        "out",
+        "templates",
+        "vendor",
+        "scheme.json",
+        "certs/root_certs.keychain"
+    ],
+    "homepage": "https://github.com/electron-userland/electron-builder",
+    "keywords": [
+        "electron",
+        "builder",
+        "build",
+        "installer",
+        "install",
+        "packager",
+        "pack",
+        "nsis",
+        "app",
+        "dmg",
+        "msi",
+        "exe",
+        "setup",
+        "Windows",
+        "OS X",
+        "MacOS",
+        "Mac",
+        "appx"
+    ],
+    "license": "MIT",
+    "main": "out/index.js",
+    "maintainers": [
+        {
+            "name": "develar",
+            "email": "develar@gmail.com"
+        },
+        {
+            "name": "stefanjudis",
+            "email": "stefanjudis@gmail.com"
+        }
+    ],
+    "name": "electron-builder",
+    "optionalDependencies": {},
+    "publishConfig": {
+        "tag": "next"
+    },
+    "readme": "ERROR: No README data found!",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/electron-userland/electron-builder.git"
+    },
+    "scripts": {},
+    "typings": "./out/electron-builder.d.ts",
+    "version": "16.8.2"
+}
+```
+
+
+
+# misc
+- this document was created with [utility2](https://github.com/kaizhu256/node-utility2)
